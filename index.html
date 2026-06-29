@@ -15,6 +15,8 @@
     --honey-light: #F7D998;
     --cream: #FFF9EE;
     --clover: #6B7A4F;
+    --in-stock: #6FBF6F;
+    --out-of-stock: #D9534F;
   }
 
   * { box-sizing: border-box; }
@@ -93,13 +95,19 @@
     color: var(--honey-light);
     margin-bottom: 14px;
   }
+  /* Sätt class="status in" eller class="status out" på <p> nedan */
   .status::before {
     content: "";
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #6FBF6F;
     display: inline-block;
+  }
+  .status.in::before {
+    background: var(--in-stock);
+  }
+  .status.out::before {
+    background: var(--out-of-stock);
   }
 
   .price-row {
@@ -200,7 +208,7 @@
   </div>
 
   <div class="price-card" tabindex="0">
-    <p class="status">Ej i lager</p>
+    <p class="status out">Ej i lager</p>
     <div class="price-row">
       <span class="price">120 kr</span>
       <span class="unit">/ 650 gram</span>
