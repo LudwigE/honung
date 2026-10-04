@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Honung från Dalarna</title>
-<meta name="description" content="Lokal honung från Dalarna.">
+<meta name="description" content="Lokal honung från Dalarna. Skåpet är stängt för säsongen, men det finns honung kvar – hör av dig om du vill köpa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,9 +18,7 @@
     --in-stock: #6FBF6F;
     --out-of-stock: #D9534F;
   }
-
   * { box-sizing: border-box; }
-
   body {
     margin: 0;
     background: var(--cream);
@@ -31,12 +29,10 @@
     padding: 32px 20px 64px;
     line-height: 1.5;
   }
-
   main {
     max-width: 520px;
     width: 100%;
   }
-
   .eyebrow {
     font-size: 13px;
     font-weight: 600;
@@ -45,7 +41,6 @@
     color: var(--clover);
     margin: 0 0 12px;
   }
-
   h1 {
     font-family: 'Fraunces', serif;
     font-weight: 600;
@@ -53,13 +48,11 @@
     line-height: 1.1;
     margin: 0 0 18px;
   }
-
   .intro {
     font-size: 17px;
     margin: 0 0 28px;
     max-width: 40ch;
   }
-
   /* Honeycomb divider — nod to the actual hex cells in the hive */
   .comb {
     display: flex;
@@ -72,7 +65,6 @@
     stroke: var(--honey-amber);
     stroke-width: 2;
   }
-
   .price-card {
     background: var(--honey-dark);
     color: var(--cream);
@@ -85,7 +77,6 @@
     .price-card { transition: none; }
   }
   .price-card:hover { transform: translateY(-2px); }
-
   .status {
     display: inline-flex;
     align-items: center;
@@ -109,32 +100,36 @@
   .status.out::before {
     background: var(--out-of-stock);
   }
-
   .price-row {
     display: flex;
     align-items: baseline;
     gap: 10px;
     flex-wrap: wrap;
   }
-
   .price {
     font-family: 'Fraunces', serif;
     font-weight: 600;
     font-size: 48px;
     color: var(--honey-amber);
   }
-
   .unit {
     font-size: 16px;
     color: var(--honey-light);
   }
-
   .cabinet-card {
     background: var(--honey-light);
     border: 2px solid var(--honey-amber);
     border-radius: 14px;
     padding: 24px 26px;
     margin: 0 0 24px;
+  }
+  /* Vintervariant: dämpat skåpkort när det är stängt för säsongen */
+  .cabinet-card.closed {
+    background: transparent;
+    border: 2px dashed #D9C9A8;
+  }
+  .cabinet-card.closed .cabinet-address {
+    font-size: 20px;
   }
   .cabinet-label {
     font-size: 13px;
@@ -156,7 +151,6 @@
     color: #6B5A3E;
     margin: 0;
   }
-
   .harvest-card {
     background: #F1F0E4;
     border: 2px solid var(--clover);
@@ -190,7 +184,6 @@
   .harvest-card a {
     font-weight: 600;
   }
-
   .contact {
     border: 1px dashed #D9C9A8;
     border-radius: 12px;
@@ -212,7 +205,6 @@
     font-weight: 600;
     color: var(--honey-dark);
   }
-
   a {
     color: var(--honey-dark);
     text-decoration-color: var(--honey-amber);
@@ -221,50 +213,53 @@
     outline: 2px solid var(--clover);
     outline-offset: 3px;
   }
-
   footer {
     margin-top: 36px;
     font-size: 13px;
     color: #9A8A6E;
   }
 </style>
-
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "81deb1cf8efa49f8afb604f39c7bdc24"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "81deb1cf8efa49f8afb604f39c7bdc24"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-<main>
-  <p class="eyebrow">Lokal honung</p>
-  <h1>Honung från egen bigård</h1>
+  <main>
+    <p class="eyebrow">Lokal honung</p>
+    <h1>Honung från egen bigård</h1>
 
-  <div class="comb" aria-hidden="true">
-    <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
-    <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
-    <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
-    <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
-  </div>
-
-  <div class="price-card" tabindex="0">
-    <p class="status in">I lager</p>
-    <div class="price-row">
-      <span class="price">120 kr</span>
-      <span class="unit">/ 650 gram</span>
+    <div class="comb" aria-hidden="true">
+      <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
+      <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
+      <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
+      <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
     </div>
-  </div>
 
-  <div class="cabinet-card">
-    <p class="cabinet-label">Självbetjäningsskåp</p>
-    <p class="cabinet-address">Tolvmilavägen 116, Borlänge</p>
-  </div>
+    <div class="price-card" tabindex="0">
+      <p class="status in">I lager – hämtas efter överenskommelse</p>
+      <div class="price-row">
+        <span class="price">120 kr</span>
+        <span class="unit">/ 650 gram</span>
+      </div>
+    </div>
 
+    <div class="harvest-card">
+      <p class="harvest-label">Honung finns kvar</p>
+      <p class="harvest-title">Hör av dig om du vill köpa</p>
+      <p class="harvest-text">Skåpet har gått i vinterdvala, men det finns fortfarande honung att köpa.</p>
+    </div>
 
-  <div class="contact">
-    <p class="section-label">Frågor?</p>
-    <p class="contact-name">Ludwig Eweström</p>
-    <p><a href="tel:0762554103">076-255 41 03</a></p>
-    <p><a href="mailto:ludwig.ewestrom@gmail.com">ludwig.ewestrom@gmail.com</a></p>
-    <p>Tolvmilavägen 116, Borlänge</p>
-  </div>
+    <div class="cabinet-card closed">
+      <p class="cabinet-label">Självbetjäningsskåp</p>
+      <p class="cabinet-address">Stängt för säsongen</p>
+      <p class="cabinet-sub">Nu när vädret blivit för kallt och blött stänger skåpet på Tolvmilavägen 116 för vintern. Det öppnar igen till våren.</p>
+    </div>
 
-</main>
+    <div class="contact">
+      <p class="section-label">Frågor?</p>
+      <p class="contact-name">Ludwig Eweström</p>
+      <p><a href="tel:0762554103">076-255 41 03</a></p>
+      <p><a href="mailto:ludwig.ewestrom@gmail.com">ludwig.ewestrom@gmail.com</a></p>
+      <p>Tolvmilavägen 116, Borlänge</p>
+    </div>
+  </main>
 </body>
 </html>
