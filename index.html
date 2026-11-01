@@ -202,6 +202,44 @@
     color: var(--muted);
     margin: 0;
   }
+  .comb-card {
+    background: #F1F0E4;
+    border: 2px solid var(--clover);
+    border-radius: 14px;
+    padding: 24px 26px;
+    margin: 0 0 24px;
+  }
+  .comb-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clover);
+    margin: 0 0 10px;
+  }
+  .comb-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--clover);
+    margin: 0 0 10px;
+  }
+  .comb-text {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .comb-reservation {
+    font-size: 14px;
+    font-style: italic;
+  }
+  .comb-text:last-child {
+    margin-bottom: 0;
+  }
+  .comb-text a {
+    font-weight: 600;
+    white-space: nowrap;
+  }
   .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -360,6 +398,15 @@
         <h2 class="product-name" id="rinnande">Rinnande honung</h2>
         <p class="sold-out-text">Slut för i år – kommer tillbaka till sommaren.</p>
       </div>
+    </section>
+
+    <section class="comb-card" aria-labelledby="vaxkaka">
+      <p class="comb-label">Intresseanmälan</p>
+      <h2 class="product-name" id="vaxkaka">Hela vaxkakor</h2>
+      <p class="comb-price">200 kr/kg</p>
+      <p class="comb-text">En hel ram där bina byggt hela kakan själva, utan mellanvägg – bara ren honung och vax.</p>
+      <p class="comb-text">Vill du ha en? Sms:a <a href="sms:+46762554103">076-255 41 03</a> så skriver jag upp dig. Leverans blir någon gång under sommaren, och du betalar först vid leverans.</p>
+      <p class="comb-text comb-reservation">Bina gör inte alltid som man vill, så jag kan tyvärr inte garantera att jag kan leverera.</p>
     </section>
 
     <section class="cabinet-card closed">
