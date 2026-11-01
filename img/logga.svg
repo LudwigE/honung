@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" color="#2E1A05">
+  <g stroke="currentColor" stroke-width="4" stroke-linejoin="round">
+    <polygon points="30,6 49,17 49,39 30,50 11,39 11,17" fill="none"/>
+    <polygon points="70,6 89,17 89,39 70,50 51,39 51,17" fill="none"/>
+    <polygon points="50,41 69,52 69,74 50,85 31,74 31,52" fill="#D98C0F"/>
+  </g>
+  <path d="M50 85 C50 88 54 90.5 54 93.5 a4 4 0 0 1 -8 0 C46 90.5 50 88 50 85 Z" fill="#D98C0F" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <g transform="translate(83 72) rotate(-70) scale(1.15)">
+    <ellipse cx="-4" cy="-3" rx="3.2" ry="5.5" transform="rotate(-30 -4 -3)" fill="#F7D998" stroke="currentColor" stroke-width="1.6"/>
+    <ellipse cx="4" cy="-3" rx="3.2" ry="5.5" transform="rotate(30 4 -3)" fill="#F7D998" stroke="currentColor" stroke-width="1.6"/>
+    <clipPath id="bikropp"><ellipse cx="0" cy="2" rx="4.5" ry="6.5"/></clipPath>
+    <ellipse cx="0" cy="2" rx="4.5" ry="6.5" fill="#D98C0F"/>
+    <g clip-path="url(#bikropp)" fill="#2E1A05"><rect x="-6" y="0" width="12" height="2"/><rect x="-6" y="4" width="12" height="2"/></g>
+    <ellipse cx="0" cy="2" rx="4.5" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <circle cx="0" cy="-6.5" r="2.6" fill="currentColor"/>
+  </g>
+</svg>
