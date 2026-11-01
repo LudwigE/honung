@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Honung från Dalarna – egen bigård i Borlänge</title>
-<meta name="description" content="Lokal honung från egen bigård i Borlänge, Dalarna. 120 kr för 650 gram, 100 kr/burk vid 5 burkar eller fler. Skåpet är stängt för säsongen, men det finns honung kvar – ring, sms:a eller mejla. Betalning med Swish.">
+<title>Eweströms Honung – lokal honung från Borlänge, Dalarna</title>
+<meta name="description" content="Eweströms Honung – lokal honung från egen bigård i Borlänge, Dalarna. Ympad honung i lager: 120 kr för 650 gram, 100 kr/burk vid 5 burkar eller fler. Skåpet är stängt för säsongen, men det finns honung kvar – ring, sms:a eller mejla. Betalning med Swish.">
 <meta name="theme-color" content="#2E1A05">
 <!-- Förhandsvisning när länken delas i Messenger, Facebook, SMS m.m. -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:url" content="https://honung.ewestrom.se/">
-<meta property="og:title" content="Honung från egen bigård i Borlänge">
-<meta property="og:description" content="120 kr / 650 gram – 100 kr/burk vid 5 eller fler. Det finns honung kvar – hör av dig om du vill köpa.">
+<meta property="og:site_name" content="Eweströms Honung">
+<meta property="og:title" content="Eweströms Honung – lokal honung från Borlänge">
+<meta property="og:description" content="Ympad honung: 120 kr / 650 gram – 100 kr/burk vid 5 eller fler. Det finns honung kvar – hör av dig på sms om du vill köpa.">
+<meta property="og:image" content="https://honung.ewestrom.se/img/ympad.jpg">
+<meta property="og:image:alt" content="Tre burkar ympad honung">
 <link rel="canonical" href="https://honung.ewestrom.se/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 24'><polygon points='7,1 21,1 27,12 21,23 7,23 1,12' fill='%23D98C0F' stroke='%232E1A05' stroke-width='2'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +25,13 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Honung från egen bigård",
-  "description": "Lokal honung från Borlänge, Dalarna.",
+  "name": "Ympad honung",
+  "brand": {
+    "@type": "Brand",
+    "name": "Eweströms Honung"
+  },
+  "description": "Krämig ympad honung från egen bigård i Borlänge, Dalarna.",
+  "image": "https://honung.ewestrom.se/img/ympad.jpg",
   "offers": {
     "@type": "AggregateOffer",
     "lowPrice": "100",
@@ -70,6 +78,26 @@
   main {
     max-width: 520px;
     width: 100%;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 36px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+  }
+  .brand svg {
+    width: 30px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+  .brand polygon {
+    fill: var(--honey-amber);
+    stroke: var(--honey-dark);
+    stroke-width: 2;
   }
   .eyebrow {
     font-size: 13px;
@@ -149,6 +177,80 @@
     font-size: 16px;
     color: var(--honey-light);
   }
+  .product-photo {
+    display: block;
+    width: calc(100% + 56px);
+    height: auto;
+    margin: -28px -28px 22px;
+    border-radius: 14px 14px 0 0;
+  }
+  .product-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 0 0 4px;
+  }
+  .product-desc {
+    font-size: 15px;
+    color: var(--honey-light);
+    margin: 0 0 8px;
+  }
+  .sold-out-card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin: 0 0 24px;
+  }
+  .sold-out-card img {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: saturate(0.6);
+    opacity: 0.85;
+  }
+  .sold-out-card .status {
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .sold-out-card .product-name {
+    font-size: 20px;
+  }
+  .sold-out-text {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 0 0 24px;
+  }
+  .gallery .section-label {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+  }
+  .gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .gallery img.wide {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 3;
+  }
+  .gallery img.wide-video {
+    aspect-ratio: 16 / 9;
+  }
   .bulk-price {
     display: inline-block;
     font-size: 15px;
@@ -166,6 +268,14 @@
     font-size: 15px;
     color: var(--cream);
     margin: 12px 0 0;
+  }
+  .price-note a {
+    color: var(--honey-light);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .price-note a:focus-visible {
+    outline-color: var(--honey-light);
   }
   .price-note + .price-note {
     margin-top: 6px;
@@ -245,6 +355,10 @@
 </head>
 <body>
   <main>
+    <header class="brand">
+      <svg viewBox="0 0 28 24" aria-hidden="true"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
+      <span>Eweströms Honung</span>
+    </header>
     <p class="eyebrow">Lokal honung · Borlänge</p>
     <h1>Honung från egen bigård</h1>
     <p class="intro">Finns att köpa på Tolvmilavägen 116 i Borlänge, Dalarna.</p>
@@ -256,21 +370,41 @@
       <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
     </div>
 
-    <section class="price-card" aria-labelledby="pris">
+    <section class="price-card" aria-labelledby="ympad">
+      <img class="product-photo" src="img/ympad.jpg" width="960" height="1199" alt="Tre burkar ljus, krämig ympad honung staplade på en veranda">
       <p class="status in">I lager – hämtas efter överenskommelse</p>
-      <div class="price-row" id="pris">
+      <h2 class="product-name" id="ympad">Ympad honung</h2>
+      <p class="product-desc">Krämig och lätt att breda.</p>
+      <div class="price-row">
         <span class="price">120 kr</span>
         <span class="unit">/ 650 gram</span>
       </div>
       <p class="bulk-price"><strong>5 burkar eller fler:</strong> 100 kr/burk</p>
-      <p class="price-note">Skåpet har gått i vinterdvala, men det finns fortfarande honung kvar. Hör av dig så bestämmer vi en tid!</p>
+      <p class="price-note">Skåpet har gått i vinterdvala, men det finns fortfarande honung kvar. Hör av dig på sms till <a href="sms:+46762554103">076-255 41 03</a> så bestämmer vi en tid!</p>
       <p class="price-note">Betalning med Swish.</p>
+    </section>
+
+    <section class="sold-out-card" aria-labelledby="rinnande">
+      <img src="img/rinnande.jpg" width="900" height="900" alt="Burk med gyllene rinnande honung på ett trädäck" loading="lazy">
+      <div>
+        <p class="status out">Slut</p>
+        <h2 class="product-name" id="rinnande">Rinnande honung</h2>
+        <p class="sold-out-text">Slut för i år – kommer tillbaka till sommaren.</p>
+      </div>
     </section>
 
     <section class="cabinet-card closed">
       <p class="cabinet-label">Självbetjäningsskåp</p>
       <p class="cabinet-address">Stängt för säsongen</p>
       <p class="cabinet-sub">Nu när vädret blivit för kallt och blött stänger skåpet på Tolvmilavägen 116 för vintern. Det öppnar igen till våren.</p>
+    </section>
+
+    <section class="gallery" aria-labelledby="bigarden">
+      <h2 class="section-label" id="bigarden">Från bigården</h2>
+      <img class="wide" src="img/bigard-host.jpg" width="1000" height="750" alt="Bikupor bland björkar och ormbunkar i höstfärger" loading="lazy">
+      <img src="img/bi-appelblom.jpg" width="800" height="800" alt="Bi som samlar nektar i rosa äppelblom" loading="lazy">
+      <img src="img/bi-maskros.jpg" width="683" height="683" alt="Bi på en maskros i gräset" loading="lazy">
+      <img class="wide wide-video" src="img/kupor-narbild.jpg" width="1000" height="561" alt="Närbild på röda bikupor med bin vid flustret, omgivna av ormbunkar" loading="lazy">
     </section>
 
     <section class="contact">
@@ -281,7 +415,7 @@
       <p><a href="https://maps.google.com/?q=Tolvmilav%C3%A4gen+116,+Borl%C3%A4nge">Tolvmilavägen 116, Borlänge</a></p>
     </section>
 
-    <footer>Honung från egen bigård i Borlänge · Uppdaterad november 2026</footer>
+    <footer>© Eweströms Honung · Borlänge, Dalarna · Uppdaterad november 2026</footer>
   </main>
 </body>
 </html>
