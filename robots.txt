@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://honung.ewestrom.se/sitemap.xml
+Sitemap: https://ewestromshonung.se/sitemap.xml
