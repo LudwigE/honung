@@ -3,11 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Honung från Dalarna</title>
-<meta name="description" content="Lokal honung från Dalarna. Skåpet är stängt för säsongen, men det finns honung kvar – hör av dig om du vill köpa.">
+<title>Honung från Dalarna – egen bigård i Borlänge</title>
+<meta name="description" content="Lokal honung från egen bigård i Borlänge, Dalarna. 120 kr för 650 gram, 100 kr/burk vid 5 burkar eller fler. Skåpet är stängt för säsongen, men det finns honung kvar – ring, sms:a eller mejla. Betalning med Swish.">
+<meta name="theme-color" content="#2E1A05">
+<!-- Förhandsvisning när länken delas i Messenger, Facebook, SMS m.m. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:url" content="https://honung.ewestrom.se/">
+<meta property="og:title" content="Honung från egen bigård i Borlänge">
+<meta property="og:description" content="120 kr / 650 gram – 100 kr/burk vid 5 eller fler. Det finns honung kvar – hör av dig om du vill köpa.">
+<link rel="canonical" href="https://honung.ewestrom.se/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 24'><polygon points='7,1 21,1 27,12 21,23 7,23 1,12' fill='%23D98C0F' stroke='%232E1A05' stroke-width='2'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Strukturerad data så att Google förstår vad sidan säljer -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Honung från egen bigård",
+  "description": "Lokal honung från Borlänge, Dalarna.",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "100",
+    "highPrice": "120",
+    "priceCurrency": "SEK",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Person",
+      "name": "Ludwig Eweström",
+      "telephone": "+46762554103",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tolvmilavägen 116",
+        "addressLocality": "Borlänge",
+        "addressCountry": "SE"
+      }
+    }
+  }
+}
+</script>
 <style>
   :root {
     --honey-dark: #2E1A05;
@@ -15,6 +51,8 @@
     --honey-light: #F7D998;
     --cream: #FFF9EE;
     --clover: #6B7A4F;
+    --muted: #6B5A3E;
+    --border: #D9C9A8;
     --in-stock: #6FBF6F;
     --out-of-stock: #D9534F;
   }
@@ -71,12 +109,7 @@
     border-radius: 14px;
     padding: 28px 28px 24px;
     margin-bottom: 28px;
-    transition: transform 0.2s ease;
   }
-  @media (prefers-reduced-motion: reduce) {
-    .price-card { transition: none; }
-  }
-  .price-card:hover { transform: translateY(-2px); }
   .status {
     display: inline-flex;
     align-items: center;
@@ -84,7 +117,7 @@
     font-size: 14px;
     font-weight: 500;
     color: var(--honey-light);
-    margin-bottom: 14px;
+    margin: 0 0 14px;
   }
   /* Sätt class="status in" eller class="status out" på <p> nedan */
   .status::before {
@@ -116,6 +149,28 @@
     font-size: 16px;
     color: var(--honey-light);
   }
+  .bulk-price {
+    display: inline-block;
+    font-size: 15px;
+    color: var(--honey-light);
+    border: 1.5px solid var(--honey-amber);
+    border-radius: 999px;
+    padding: 4px 14px;
+    margin: 6px 0 0;
+  }
+  .bulk-price strong {
+    color: var(--honey-amber);
+    font-weight: 600;
+  }
+  .price-note {
+    font-size: 15px;
+    color: var(--cream);
+    margin: 12px 0 0;
+  }
+  .price-note + .price-note {
+    margin-top: 6px;
+    color: var(--honey-light);
+  }
   .cabinet-card {
     background: var(--honey-light);
     border: 2px solid var(--honey-amber);
@@ -126,7 +181,7 @@
   /* Vintervariant: dämpat skåpkort när det är stängt för säsongen */
   .cabinet-card.closed {
     background: transparent;
-    border: 2px dashed #D9C9A8;
+    border: 2px dashed var(--border);
   }
   .cabinet-card.closed .cabinet-address {
     font-size: 20px;
@@ -148,48 +203,15 @@
   }
   .cabinet-sub {
     font-size: 14px;
-    color: #6B5A3E;
+    color: var(--muted);
     margin: 0;
   }
-  .harvest-card {
-    background: #F1F0E4;
-    border: 2px solid var(--clover);
-    border-radius: 14px;
-    padding: 24px 26px;
-    margin: 0 0 24px;
-  }
-  .harvest-label {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--clover);
-    margin: 0 0 10px;
-  }
-  .harvest-title {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 22px;
-    margin: 0 0 10px;
-    color: var(--honey-dark);
-  }
-  .harvest-card p.harvest-text {
-    font-size: 15px;
-    color: #6B5A3E;
-    margin: 0 0 10px;
-  }
-  .harvest-card p.harvest-text:last-child {
-    margin-bottom: 0;
-  }
-  .harvest-card a {
-    font-weight: 600;
-  }
   .contact {
-    border: 1px dashed #D9C9A8;
+    border: 1px dashed var(--border);
     border-radius: 12px;
     padding: 18px 20px;
     font-size: 15px;
-    color: #6B5A3E;
+    color: var(--muted);
   }
   .contact p { margin: 0 0 8px; }
   .contact p:last-child { margin-bottom: 0; }
@@ -209,22 +231,23 @@
     color: var(--honey-dark);
     text-decoration-color: var(--honey-amber);
   }
-  a:focus-visible, .price-card:focus-visible {
+  a:focus-visible {
     outline: 2px solid var(--clover);
     outline-offset: 3px;
   }
   footer {
     margin-top: 36px;
     font-size: 13px;
-    color: #9A8A6E;
+    color: #7A6A4E;
   }
 </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "81deb1cf8efa49f8afb604f39c7bdc24"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
   <main>
-    <p class="eyebrow">Lokal honung</p>
+    <p class="eyebrow">Lokal honung · Borlänge</p>
     <h1>Honung från egen bigård</h1>
+    <p class="intro">Bigården finns på Tolvmilavägen i Borlänge, Dalarna.</p>
 
     <div class="comb" aria-hidden="true">
       <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
@@ -233,33 +256,32 @@
       <svg viewBox="0 0 28 24"><polygon points="7,1 21,1 27,12 21,23 7,23 1,12"/></svg>
     </div>
 
-    <div class="price-card" tabindex="0">
+    <section class="price-card" aria-labelledby="pris">
       <p class="status in">I lager – hämtas efter överenskommelse</p>
-      <div class="price-row">
+      <div class="price-row" id="pris">
         <span class="price">120 kr</span>
         <span class="unit">/ 650 gram</span>
       </div>
-    </div>
+      <p class="bulk-price"><strong>5 burkar eller fler:</strong> 100 kr/burk</p>
+      <p class="price-note">Skåpet har gått i vinterdvala, men det finns fortfarande honung kvar. Hör av dig så bestämmer vi en tid!</p>
+      <p class="price-note">Betalning med Swish.</p>
+    </section>
 
-    <div class="harvest-card">
-      <p class="harvest-label">Honung finns kvar</p>
-      <p class="harvest-title">Hör av dig om du vill köpa</p>
-      <p class="harvest-text">Skåpet har gått i vinterdvala, men det finns fortfarande honung att köpa.</p>
-    </div>
-
-    <div class="cabinet-card closed">
+    <section class="cabinet-card closed">
       <p class="cabinet-label">Självbetjäningsskåp</p>
       <p class="cabinet-address">Stängt för säsongen</p>
       <p class="cabinet-sub">Nu när vädret blivit för kallt och blött stänger skåpet på Tolvmilavägen 116 för vintern. Det öppnar igen till våren.</p>
-    </div>
+    </section>
 
-    <div class="contact">
-      <p class="section-label">Frågor?</p>
+    <section class="contact">
+      <p class="section-label">Kontakt</p>
       <p class="contact-name">Ludwig Eweström</p>
-      <p><a href="tel:0762554103">076-255 41 03</a></p>
+      <p><a href="tel:+46762554103">076-255 41 03</a></p>
       <p><a href="mailto:ludwig.ewestrom@gmail.com">ludwig.ewestrom@gmail.com</a></p>
-      <p>Tolvmilavägen 116, Borlänge</p>
-    </div>
+      <p><a href="https://maps.google.com/?q=Tolvmilav%C3%A4gen+116,+Borl%C3%A4nge">Tolvmilavägen 116, Borlänge</a></p>
+    </section>
+
+    <footer>Honung från egen bigård i Borlänge · Uppdaterad november 2026</footer>
   </main>
 </body>
 </html>
