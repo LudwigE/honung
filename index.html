@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eweströms Honung – lokal honung från Borlänge, Dalarna</title>
-<meta name="description" content="Eweströms Honung – lokal honung från egen bigård i Borlänge, Dalarna. Ympad honung i lager: 120 kr för 650 gram, 100 kr/burk vid 5 burkar eller fler. Skåpet är stängt för säsongen, men det finns honung kvar – ring, sms:a eller mejla. Betalning med Swish.">
+<title>Eweströms Honung – äkta svensk honung från Borlänge, Dalarna</title>
+<meta name="description" content="Eweströms Honung – äkta svensk honung från egen bigård i Borlänge, Dalarna. Krämig honung i lager: 120 kr för 650 gram, 100 kr/burk vid 5 burkar eller fler. Skåpet är stängt för säsongen, men det finns honung kvar – ring, sms:a eller mejla. Betalning med Swish.">
 <meta name="theme-color" content="#2E1A05">
 <!-- Förhandsvisning när länken delas i Messenger, Facebook, SMS m.m. -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sv_SE">
 <meta property="og:url" content="https://ewestromshonung.se/">
 <meta property="og:site_name" content="Eweströms Honung">
-<meta property="og:title" content="Eweströms Honung – lokal honung från Borlänge">
-<meta property="og:description" content="Ympad honung: 120 kr / 650 gram – 100 kr/burk vid 5 eller fler. Det finns honung kvar – sms:a eller mejla om du vill köpa.">
+<meta property="og:title" content="Eweströms Honung – äkta svensk honung från Borlänge">
+<meta property="og:description" content="Krämig honung: 120 kr / 650 gram – 100 kr/burk vid 5 eller fler. Det finns honung kvar – sms:a eller mejla om du vill köpa.">
 <meta property="og:image" content="https://ewestromshonung.se/img/ympad.jpg">
-<meta property="og:image:alt" content="Tre burkar ympad honung">
+<meta property="og:image:alt" content="Tre burkar krämig honung">
 <link rel="canonical" href="https://ewestromshonung.se/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -26,17 +26,25 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Ympad honung",
+  "name": "Krämig honung",
   "brand": {
     "@type": "Brand",
     "name": "Eweströms Honung"
   },
-  "description": "Krämig ympad honung från egen bigård i Borlänge, Dalarna.",
+  "description": "Äkta svensk krämig honung från egen bigård i Borlänge, Dalarna.",
+  "countryOfOrigin": {
+    "@type": "Country",
+    "name": "Sverige"
+  },
   "image": "https://ewestromshonung.se/img/ympad.jpg",
+  "weight": {
+    "@type": "QuantitativeValue",
+    "value": "650",
+    "unitCode": "GRM"
+  },
   "offers": {
-    "@type": "AggregateOffer",
-    "lowPrice": "100",
-    "highPrice": "120",
+    "@type": "Offer",
+    "price": "120",
     "priceCurrency": "SEK",
     "availability": "https://schema.org/InStock",
     "seller": {
@@ -167,10 +175,12 @@
     line-height: 1.2;
     margin: 0 0 4px;
   }
-  .product-desc {
-    font-size: 15px;
-    color: var(--honey-light);
-    margin: 0 0 8px;
+  .product-explain {
+    font-size: 14px;
+    color: var(--cream);
+    opacity: 0.85;
+    margin: 0 0 14px;
+    max-width: 46ch;
   }
   .sold-out-card {
     display: flex;
@@ -196,6 +206,10 @@
   }
   .sold-out-card .product-name {
     font-size: 20px;
+  }
+  .sold-out-text.sold-out-explain {
+    margin-top: 6px;
+    font-size: 13px;
   }
   .sold-out-text {
     font-size: 14px;
@@ -373,15 +387,16 @@
       <img src="img/logga.svg" width="52" height="52" alt="">
       <span>Eweströms Honung</span>
     </header>
-    <h1>Honung från egen bigård</h1>
+    <h1>Äkta svensk honung från egen bigård</h1>
     <p class="intro">Finns att köpa på Tolvmilavägen 116 i Borlänge, Dalarna.</p>
 
 
     <section class="price-card" aria-labelledby="ympad">
-      <img class="product-photo" src="img/ympad.jpg" width="960" height="1199" alt="Tre burkar ljus, krämig ympad honung staplade på en veranda">
+      <img class="product-photo" src="img/ympad.jpg" width="960" height="1199" alt="Tre burkar ljus, krämig honung staplade på en veranda">
       <p class="status in">I lager – hämtas efter överenskommelse</p>
-      <h2 class="product-name" id="ympad">Ympad honung</h2>
-      <p class="product-desc">Krämig honung.</p>
+      <h2 class="product-name" id="ympad">Krämig honung</h2>
+      <p class="product-explain">Honungen har rörts om medan den stelnat. Då blir kristallerna väldigt små, och honungen blir slät och krämig i stället för hård och grynig.</p>
+      <p class="product-explain">Vita mönster mot glaset, så kallad rimfrost, kan förekomma. Det är små luftfickor som bildas när honungen kristalliserar, och det påverkar varken smak eller kvalitet. Rimfrost är vanligt i naturlig, obehandlad honung.</p>
       <div class="price-row">
         <span class="price">120 kr</span>
         <span class="unit">/ 650 gram</span>
@@ -397,6 +412,7 @@
         <p class="status out">Slut</p>
         <h2 class="product-name" id="rinnande">Rinnande honung</h2>
         <p class="sold-out-text">Slut för i år – kommer tillbaka till sommaren.</p>
+        <p class="sold-out-text sold-out-explain">Honungen är rinnande när den slungats, men stelnar naturligt med tiden och blir då fast, gammaldags honung.</p>
       </div>
     </section>
 
