@@ -25,40 +25,116 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Krämig honung",
-  "brand": {
-    "@type": "Brand",
-    "name": "Eweströms Honung"
-  },
-  "description": "Äkta svensk krämig honung från egen bigård i Borlänge, Dalarna.",
-  "countryOfOrigin": {
-    "@type": "Country",
-    "name": "Sverige"
-  },
-  "image": "https://ewestromshonung.se/img/ympad.jpg",
-  "weight": {
-    "@type": "QuantitativeValue",
-    "value": "650",
-    "unitCode": "GRM"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "120",
-    "priceCurrency": "SEK",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Person",
-      "name": "Ludwig Eweström",
+  "@graph": [
+    {
+      "@type": "Store",
+      "@id": "https://ewestromshonung.se/#butik",
+      "name": "Eweströms Honung",
+      "description": "Äkta svensk honung från egen bigård. Självbetjäningsskåp på Tolvmilavägen 116 i Borlänge – stängt under vintern, öppnar igen till våren. Honung kan köpas efter överenskommelse året runt.",
+      "url": "https://ewestromshonung.se/",
+      "logo": "https://ewestromshonung.se/apple-touch-icon.png",
+      "image": "https://ewestromshonung.se/img/ympad.jpg",
       "telephone": "+46762554103",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Tolvmilavägen 116",
         "addressLocality": "Borlänge",
+        "addressRegion": "Dalarna",
         "addressCountry": "SE"
+      },
+      "paymentAccepted": "Swish",
+      "currenciesAccepted": "SEK",
+      "priceRange": "100–200 kr"
+    },
+    {
+      "@type": "Product",
+      "name": "Krämig honung",
+      "brand": {
+        "@type": "Brand",
+        "name": "Eweströms Honung"
+      },
+      "description": "Äkta svensk krämig honung från egen bigård i Borlänge, Dalarna.",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Sverige"
+      },
+      "image": "https://ewestromshonung.se/img/ympad.jpg",
+      "weight": {
+        "@type": "QuantitativeValue",
+        "value": "650",
+        "unitCode": "GRM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "120",
+        "priceCurrency": "SEK",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://ewestromshonung.se/#butik"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Rinnande honung",
+      "brand": {
+        "@type": "Brand",
+        "name": "Eweströms Honung"
+      },
+      "description": "Äkta svensk rinnande honung från egen bigård i Borlänge, Dalarna. Slut för i år – kommer tillbaka till sommaren.",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Sverige"
+      },
+      "image": "https://ewestromshonung.se/img/rinnande.jpg",
+      "weight": {
+        "@type": "QuantitativeValue",
+        "value": "650",
+        "unitCode": "GRM"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "120",
+        "priceCurrency": "SEK",
+        "availability": "https://schema.org/OutOfStock",
+        "seller": {
+          "@id": "https://ewestromshonung.se/#butik"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "name": "Hel vaxkaka",
+      "brand": {
+        "@type": "Brand",
+        "name": "Eweströms Honung"
+      },
+      "description": "En hel ram med vaxkaka som bina byggt själva, utan mellanvägg – bara ren honung och vax. Leverans under sommaren, betalning vid leverans.",
+      "countryOfOrigin": {
+        "@type": "Country",
+        "name": "Sverige"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "200",
+        "priceCurrency": "SEK",
+        "availability": "https://schema.org/PreOrder",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "200",
+          "priceCurrency": "SEK",
+          "referenceQuantity": {
+            "@type": "QuantitativeValue",
+            "value": "1",
+            "unitCode": "KGM"
+          }
+        },
+        "seller": {
+          "@id": "https://ewestromshonung.se/#butik"
+        }
       }
     }
-  }
+  ]
 }
 </script>
 <style>
@@ -206,6 +282,10 @@
   }
   .sold-out-card .product-name {
     font-size: 20px;
+  }
+  .sold-out-text.sold-out-price {
+    font-weight: 600;
+    margin-bottom: 4px;
   }
   .sold-out-text.sold-out-explain {
     margin-top: 6px;
@@ -411,6 +491,7 @@
       <div>
         <p class="status out">Slut</p>
         <h2 class="product-name" id="rinnande">Rinnande honung</h2>
+        <p class="sold-out-text sold-out-price">120 kr / 650 gram</p>
         <p class="sold-out-text">Slut för i år – kommer tillbaka till sommaren.</p>
         <p class="sold-out-text sold-out-explain">Honungen är rinnande när den slungats, men stelnar naturligt med tiden och blir då fast, gammaldags honung.</p>
       </div>
